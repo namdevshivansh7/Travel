@@ -1,0 +1,369 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>SkyWings Travel Agency</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<style> 
+*{margin:0;padding:0;box-sizing:border-box;} 
+body{ 
+font-family: Arial, Helvetica, sans-serif; 
+background:#f3f4f6; 
+color:#111827; 
+} 
+header{ 
+background:#1f2937; 
+color:#fff; 
+padding:10px 20px; 
+display:flex; 
+justify-content:space-between; 
+align-items:center; 
+flex-wrap:wrap; 
+} 
+.logo{font-weight:bold;font-size:18px;} 
+nav a{ 
+color:#e5e7eb; 
+      text-decoration:none; 
+      margin-left:15px; 
+      font-size:14px; 
+    } 
+    nav a:hover{color:#fff;} 
+ 
+    .hero{ 
+      background:#e0f2fe; 
+      padding:20px; 
+      display:flex; 
+      flex-wrap:wrap; 
+      gap:20px; 
+      align-items:center; 
+      justify-content:center; 
+    } 
+    .hero-text{flex:1 1 260px;min-width:260px;} 
+    .hero-text h1{ 
+      font-size:26px; 
+      margin-bottom:10px; 
+      color:#0f766e; 
+    } 
+    .hero-text p{ 
+      font-size:14px; 
+      margin-bottom:10px; 
+    } 
+    .hero-buttons button{ 
+      padding:8px 14px; 
+      border:none; 
+      cursor:pointer; 
+      border-radius:4px; 
+      font-size:13px; 
+      margin-right:8px; 
+    } 
+    .btn-primary{background:#0ea5e9;color:#fff;} 
+    .btn-outline{ 
+      background:#fff; 
+      color:#0ea5e9; 
+      border:1px solid #0ea5e9; 
+    } 
+ 
+    .hero-img{flex:1 1 260px;min-width:260px;text-align:center;} 
+    .hero-img img{ 
+      max-width:100%; 
+      border-radius:8px; 
+    } 
+ 
+    section{ 
+      padding:20px; 
+      max-width:1100px; 
+      margin:0 auto; 
+    } 
+    section h2{ 
+      font-size:20px; 
+      margin-bottom:8px; 
+      border-left:4px solid #0ea5e9; 
+      padding-left:6px; 
+      color:#111827; 
+    } 
+    section p{font-size:14px;margin-bottom:8px;color:#374151;} 
+ 
+    .card-grid{ 
+      display:flex; 
+      flex-wrap:wrap; 
+      gap:15px; 
+      margin-top:10px; 
+    } 
+    .card{ 
+      background:#fff; 
+      padding:12px; 
+      border-radius:6px; 
+      box-shadow:0 2px 6px rgba(0,0,0,0.08); 
+      flex:1 1 260px; 
+      min-width:260px; 
+      font-size:13px; 
+    } 
+    .card h3{font-size:16px;margin-bottom:6px;} 
+    .card img{ 
+      width:100%; 
+      border-radius:6px; 
+      margin-bottom:6px; 
+    } 
+    .tag{ 
+      display:inline-block; 
+      padding:2px 6px; 
+      font-size:11px; 
+      border-radius:999px; 
+      background:#eff6ff; 
+      color:#1d4ed8; 
+      margin-bottom:4px; 
+    } 
+    .price{font-weight:bold;color:#047857;margin:4px 0;} 
+    .duration{font-size:12px;color:#6b7280;} 
+ 
+    .two-col{ 
+      display:flex; 
+      flex-wrap:wrap; 
+      gap:15px; 
+      margin-top:10px; 
+    } 
+    ul{margin-left:18px;font-size:13px;} 
+    li{margin-bottom:4px;} 
+ 
+    .form-group{ 
+      margin-bottom:8px; 
+      font-size:13px; 
+    } 
+    .form-group label{ 
+      display:block; 
+      margin-bottom:3px; 
+    } 
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea{ 
+      width:100%; 
+      padding:6px; 
+      border-radius:4px; 
+border:1px solid #d1d5db; 
+font-size:13px; 
+} 
+textarea{resize:vertical;min-height:60px;} 
+.gallery-grid{ 
+display:grid; 
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); 
+gap:10px; 
+margin-top:10px; 
+} 
+.gallery-grid img{ 
+width:100%; 
+border-radius:6px; 
+height:120px; 
+object-fit:cover; 
+} 
+footer{ 
+background:#111827; 
+color:#9ca3af; 
+text-align:center; 
+padding:10px; 
+font-size:12px; 
+margin-top:10px; 
+} 
+@media(max-width:600px){ 
+header{justify-content:center;gap:8px;} 
+nav{width:100%;text-align:center;} 
+nav a{margin:0 8px;} 
+} 
+</style> 
+</head> 
+<body> 
+<!-- Header --> 
+<header> 
+<div class="logo">SkyWings Travel</div> 
+<nav> 
+<a href="#packages">Packages</a> 
+<a href="#booking">Booking</a> 
+<a href="#tips">Travel Tips</a> 
+<a href="#gallery">Gallery</a> 
+</nav> 
+</header> 
+<!-- Hero --> 
+<section class="hero"> 
+<div class="hero-text"> 
+<h1>Plan your next perfect getaway with us.</h1> 
+<p> 
+SkyWings Travel Agency world‑class tour packages, hotel booking aur easy 
+support ke saath 
+aapki trip ko bilkul tension‑free banata hai. [web:55] 
+</p> 
+<div class="hero-buttons"> 
+<button class="btn-primary" onclick="scrollToSection('packages')">View 
+Packages</button> 
+        <button class="btn-outline" onclick="scrollToSection('booking')">Book a 
+Trip</button> 
+      </div> 
+    </div> 
+    <div class="hero-img"> 
+      <!-- Hero image --> 
+      <img src="https://images.pexels.com/photos/346885/pexels-photo
+346885.jpeg?auto=compress&cs=tinysrgb&w=600" 
+           alt="Airplane flying above clouds"> 
+    </div> 
+  </section> 
+ 
+  <!-- Packages --> 
+  <section id="packages"> 
+    <h2>Popular Tour Packages</h2> 
+    <p>Ye kuch most‑booked packages hain. Aap inme se choose karke booking form 
+me package select kar sakte ho. [web:50]</p> 
+ 
+    <div class="card-grid"> 
+      <div class="card"> 
+        <span class="tag">Beach Escape</span> 
+        <h3>Goa 4D/3N</h3> 
+        <img src="https://images.pexels.com/photos/457882/pexels-photo
+457882.jpeg?auto=compress&cs=tinysrgb&w=600" 
+             alt="Goa beach"> 
+        <p class="price">Starting from ₹12,999 per person</p> 
+        <p class="duration">4 Days • 3 Nights • Hotels + Breakfast</p> 
+        <p>Beach stay, city tour, water sports option aur airport pickup included.</p> 
+      </div> 
+ 
+      <div class="card"> 
+        <span class="tag">Hill Station</span> 
+        <h3>Manali 5D/4N</h3> 
+        <img src="https://images.pexels.com/photos/417074/pexels-photo
+417074.jpeg?auto=compress&cs=tinysrgb&w=600" 
+             alt="Manali mountains"> 
+        <p class="price">Starting from ₹16,499 per person</p> 
+        <p class="duration">5 Days • 4 Nights • Sightseeing</p> 
+        <p>Snow points, local sightseeing aur comfortable stay ke saath guided 
+tour.</p> 
+      </div> 
+ 
+      <div class="card"> 
+        <span class="tag">International</span> 
+        <h3>Dubai 5D/4N</h3> 
+        <img src="https://images.pexels.com/photos/3787839/pexels-photo
+3787839.jpeg?auto=compress&cs=tinysrgb&w=600" 
+             alt="Dubai skyline"> 
+        <p class="price">Starting from ₹39,999 per person</p> 
+        <p class="duration">5 Days • 4 Nights • Visa Support</p> 
+        <p>Desert safari, city tour, dhow cruise dinner aur more activities.</p> 
+      </div> 
+    </div> 
+  </section> 
+ 
+  <!-- Booking Section --> 
+  <section id="booking"> 
+    <h2>Book Your Trip</h2> 
+    <p>Simple booking form jisse aap tour package, dates aur travellers details bhej 
+sakte ho. (Demo only, backend nahi hai.) [web:48]</p> 
+ 
+    <div class="two-col"> 
+      <div class="card"> 
+        <h3>Booking Form (Demo)</h3> 
+        <form id="bookingForm"> 
+          <div class="form-group"> 
+            <label for="name">Full Name</label> 
+            <input id="name" type="text" required> 
+          </div> 
+          <div class="form-group"> 
+            <label for="email">Email</label> 
+            <input id="email" type="email" required> 
+          </div> 
+          <div class="form-group"> 
+            <label for="packageSelect">Select Package</label> 
+            <select id="packageSelect" required> 
+              <option value="">Choose a package</option> 
+              <option value="Goa 4D/3N">Goa 4D/3N</option> 
+              <option value="Manali 5D/4N">Manali 5D/4N</option> 
+              <option value="Dubai 5D/4N">Dubai 5D/4N</option> 
+            </select> 
+          </div> 
+          <div class="form-group"> 
+            <label for="date">Preferred Start Date</label> 
+            <input id="date" type="date" required> 
+          </div> 
+          <div class="form-group"> 
+            <label for="people">Number of Travellers</label> 
+            <input id="people" type="number" min="1" value="2" required> 
+          </div> 
+          <div class="form-group"> 
+            <label for="message">Special Requests</label> 
+            <textarea id="message" placeholder="Food preference, hotel type, 
+etc."></textarea> 
+          </div> 
+          <button class="btn-primary" style="width:100%;">Submit Booking Request 
+(Demo)</button> 
+        </form> 
+      </div> 
+ 
+      <!-- Travel Tips --> 
+      <div class="card" id="tips"> 
+        <h3>Travel Tips</h3> 
+        <p>Thode simple tips jo har traveller ke kaam aate hain. [web:55]</p> 
+        <ul> 
+          <li>Always keep a scanned copy of your ID and tickets in your 
+email/phone.</li> 
+          <li>Local weather check karke hi packing karo (especially mountains & 
+beaches).</li> 
+          <li>Important medicines aur basic first‑aid ka small pouch hamesha carry 
+karo.</li> 
+          <li>Airport / station pe time se 1–2 ghante pehle pahuchna safe rehta hai.</li> 
+          <li>International trip ke liye roaming plans ya local SIM options pehle se dekh 
+lo.</li> 
+        </ul> 
+      </div> 
+    </div> 
+  </section> 
+ 
+  <!-- Gallery --> 
+  <section id="gallery"> 
+    <h2>Destination Gallery</h2> 
+    <p>Yahan kuch famous destinations ki photos hain jo packages me cover ki ja 
+sakti hain. [web:46]</p> 
+ 
+    <div class="gallery-grid"> 
+      <img src="https://images.pexels.com/photos/417074/pexels-photo
+417074.jpeg?auto=compress&cs=tinysrgb&w=600" 
+           alt="Mountain valley"> 
+      <img src="https://images.pexels.com/photos/460376/pexels-photo
+460376.jpeg?auto=compress&cs=tinysrgb&w=600" 
+           alt="City at night"> 
+      <img src="https://images.pexels.com/photos/237272/pexels-photo
+237272.jpeg?auto=compress&cs=tinysrgb&w=600" 
+           alt="Temple and culture"> 
+      <img src="https://images.pexels.com/photos/2193300/pexels-photo
+2193300.jpeg?auto=compress&cs=tinysrgb&w=600" 
+           alt="Road trip"> 
+      <img src="https://images.pexels.com/photos/338504/pexels-photo
+338504.jpeg?auto=compress&cs=tinysrgb&w=600" 
+           alt="Lake and boat"> 
+    </div> 
+  </section> 
+ 
+  <footer> 
+    © 2025 SkyWings Travel Agency • Email: info@skywings.com • Phone: +91
+98765-00000 
+  </footer> 
+ 
+  <script> 
+    function scrollToSection(id){ 
+const el = document.getElementById(id); 
+if(el){ 
+el.scrollIntoView({behavior:"smooth"}); 
+} 
+} 
+const bookingForm = document.getElementById("bookingForm"); 
+bookingForm.addEventListener("submit", function(e){ 
+e.preventDefault(); 
+const name = document.getElementById("name").value.trim(); 
+const pkg = document.getElementById("packageSelect").value; 
+if(!name || !pkg){ 
+alert("Please fill all required fields."); 
+return; 
+} 
+alert("Thank you, " + name + "! Your booking request for " + pkg + " has been 
+received. (Demo only)"); 
+bookingForm.reset(); 
+}); 
+</script> 
+</body> 
+</html> 
+ 
+ 
